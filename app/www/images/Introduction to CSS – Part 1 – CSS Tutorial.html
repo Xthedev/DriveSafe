@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.csstutorial.net/xmlrpc.php">
+	<link href="https://www.csstutorial.net/wp-content/themes/killersites/images/favicon.ico" rel="shortcut icon">
+	
+	<meta name="google-site-verification" content="hs1FHeKxMGyhL8iQIawwo9A4V0OiGMPJuIdtnSqrZbc" />
+	<meta name="robots" content="index, follow">
+	
+	<!--[if lt IE 9]>
+	<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<title>Introduction to CSS &#8211; Part 1 &#8211; CSS Tutorial</title>
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v2.1.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Beginners CSS Tutorial For Web Designers."/>
+<link rel="canonical" href="https://www.csstutorial.net/css-intro/introductioncss-part1.php" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Introduction to CSS - Part 1" />
+<meta property="og:description" content="Beginners CSS Tutorial For Web Designers." />
+<meta property="og:url" content="https://www.csstutorial.net/css-intro/introductioncss-part1.php" />
+<meta property="og:site_name" content="CSS Tutorial" />
+<meta property="og:image" content="http://www.csstutorial.net/wp-content/uploads/2015/05/facebook.jpg" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Beginners CSS Tutorial For Web Designers."/>
+<meta name="twitter:title" content="Introduction to CSS - Part 1"/>
+<meta name="twitter:domain" content="CSS Tutorial"/>
+<meta name="twitter:image:src" content="http://www.csstutorial.net/wp-content/uploads/2015/05/facebook.jpg"/>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/www.csstutorial.net\/","name":"CSS Tutorial"}</script>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="CSS Tutorial &raquo; Feed" href="https://www.csstutorial.net/feed" />
+<link rel="alternate" type="application/rss+xml" title="CSS Tutorial &raquo; Comments Feed" href="https://www.csstutorial.net/comments/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.csstutorial.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.csstutorial.net/wp-includes/css/dist/block-library/style.min.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='https://www.csstutorial.net/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='killersites-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800&#038;ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='killersites-bootstrap-css'  href='https://www.csstutorial.net/wp-content/themes/killersites/css/bootstrap.min.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='killersites-styles-css'  href='https://www.csstutorial.net/wp-content/themes/killersites/css/style.css?ver=5.2.3' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.csstutorial.net/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.csstutorial.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.csstutorial.net/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.csstutorial.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.csstutorial.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.3" />
+<link rel='shortlink' href='https://www.csstutorial.net/?p=1715' />
+<link rel="alternate" type="application/json+oembed" href="https://www.csstutorial.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.csstutorial.net%2Fcss-intro%2Fintroductioncss-part1.php" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.csstutorial.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.csstutorial.net%2Fcss-intro%2Fintroductioncss-part1.php&#038;format=xml" />
+
+
+
+<style>
+    
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.entry-content img, 
+.entry-content iframe, 
+.entry-content object, 
+.entry-content embed {
+        max-width: 100%;
+}
+    
+</style>
+
+
+
+
+
+</head>
+<body class="page-template-default page page-id-1715 page-child parent-pageid-1245">
+
+	<header id="pageheader">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-sm-4">
+	                <a href="https://www.csstutorial.net/"><img src="https://www.csstutorial.net/wp-content/themes/killersites/images/logo.png" alt="CSS Tutorial" width="246" height="42"></a>
+	            </div>
+	            <div class="col-sm-8">
+	                <form role="search" method="get" class="search-form" action="https://www.csstutorial.net/">
+	                	<input type="search" class="search-field" placeholder="Search CSS Tutorial" value="" name="s" title="Search for:" />
+	                	<input type="submit" class="search-submit" value="Search" />
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+	
+	<nav id="pagenav">
+		<div class="container">
+		    <div class="row">
+		        <div class="col-sm-12">
+		        	<a href="#" id="mobile-toggle">Menu <img src="https://www.csstutorial.net/wp-content/themes/killersites/images/menu.png" height="20" width="24" alt=""></a>
+		        	<ul id="menu-main" class="menu"><li id="menu-item-1718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1718"><a href="https://www.csstutorial.net/">Home</a></li>
+<li id="menu-item-1771" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1715 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1771"><a href="https://www.csstutorial.net/css-intro/introductioncss-part1.php" aria-current="page">Introduction to CSS</a>
+<ul class="sub-menu">
+	<li id="menu-item-1792" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1715 current_page_item menu-item-1792"><a href="https://www.csstutorial.net/css-intro/introductioncss-part1.php" aria-current="page">Part 1</a></li>
+	<li id="menu-item-1791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1791"><a href="https://www.csstutorial.net/css-intro/introductioncss-part2.php">Part 2</a></li>
+</ul>
+</li>
+<li id="menu-item-1772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1772"><a href="https://www.csstutorial.net/part-1/basic-css-concepts-part1.php">CSS Tutorial: Part 1</a>
+<ul class="sub-menu">
+	<li id="menu-item-1788" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1788"><a href="https://www.csstutorial.net/part-1/basic-css-concepts-part1.php">Part 1</a></li>
+	<li id="menu-item-1787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1787"><a href="https://www.csstutorial.net/part-1/basic-css-concepts-part2.php">Part 2</a></li>
+</ul>
+</li>
+<li id="menu-item-1717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1717"><a href="https://www.csstutorial.net/part-2/layout-page-part1.php">CSS Tutorial: Part 2</a>
+<ul class="sub-menu">
+	<li id="menu-item-1790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1790"><a href="https://www.csstutorial.net/part-2/layout-page-part1.php">Part 1</a></li>
+	<li id="menu-item-1789" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1789"><a href="https://www.csstutorial.net/part-2/layout-page-part2.php">Part 2</a></li>
+</ul>
+</li>
+<li id="menu-item-1716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1716"><a href="https://www.csstutorial.net/css_tutorial_part3.php">CSS Tutorial: Part 3</a></li>
+<li id="menu-item-1720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1720"><a href="https://www.csstutorial.net/css_misc_images.php">CSS &#038; Images</a></li>
+<li id="menu-item-1719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1719"><a href="https://www.csstutorial.net/css_misc_inserting.php">CSS in Webpages</a></li>
+</ul>		        </div>
+			</div>
+		</div>
+	</nav>
+
+<section id="pagebanner">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+                <h1>Introduction to CSS</h1>
+                <ul id="menu-main-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1718"><a href="https://www.csstutorial.net/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1715 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1771"><a href="https://www.csstutorial.net/css-intro/introductioncss-part1.php" aria-current="page">Introduction to CSS</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1715 current_page_item menu-item-1792"><a href="https://www.csstutorial.net/css-intro/introductioncss-part1.php" aria-current="page">Part 1</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1791"><a href="https://www.csstutorial.net/css-intro/introductioncss-part2.php">Part 2</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1772"><a href="https://www.csstutorial.net/part-1/basic-css-concepts-part1.php">CSS Tutorial: Part 1</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1788"><a href="https://www.csstutorial.net/part-1/basic-css-concepts-part1.php">Part 1</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1787"><a href="https://www.csstutorial.net/part-1/basic-css-concepts-part2.php">Part 2</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1717"><a href="https://www.csstutorial.net/part-2/layout-page-part1.php">CSS Tutorial: Part 2</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1790"><a href="https://www.csstutorial.net/part-2/layout-page-part1.php">Part 1</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1789"><a href="https://www.csstutorial.net/part-2/layout-page-part2.php">Part 2</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1716"><a href="https://www.csstutorial.net/css_tutorial_part3.php">CSS Tutorial: Part 3</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1720"><a href="https://www.csstutorial.net/css_misc_images.php">CSS &#038; Images</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1719"><a href="https://www.csstutorial.net/css_misc_inserting.php">CSS in Webpages</a></li>
+</ul>			</div>
+		</div>
+	</div>
+</section>
+
+<section id="content">
+	<div class="container">
+		<div class="row">
+		
+			<div class="col-md-9 content">
+				
+				<article id="post-1715" class="post-1715 page type-page status-publish hentry">
+
+	<div class="entry-content">
+		<h2>Introduction to CSS: Part 1</h2>
+<p>This first CSS article is designed to get your &#8216;feet on the ground&#8217;. You should know at least a little about HTML and <a href="http://www.how-to-build-websites.com/">web design</a> before you  begin. Once you finish reading this page, you will be ready to jump into  the tutorial!</p>
+<div class="video png">
+<strong>My Popular CSS Video Course</strong><br />
+CSS3 works hand-in-hand with HTML5 to create the beautiful websites that we see today. My <a href="https://shop.killervideostore.com/">front end web developer course</a> teaches you everything you need to know to build amazing websites that easily cost $2000-$3000 to build &#8230; and for only $29!
+</div>
+<h2>An introduction to Cascading Style Sheets</h2>
+<p>CSS is the acronym for: ‘Cascading Style Sheets’. CSS is an extension  to basic HTML that allows you to style your web pages.</p>
+<p>An example of a style change would be to make words bold. In  standard HTML you would use the &lt;b&gt; tag like so:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">b</span>&gt;</span>make me bold<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">b</span>&gt;</span></pre></td></tr></table></div>
+
+<p>This works fine, and there is nothing wrong with it per se, except  that now if you wanted to say change all your text that you initially  made bold to underlined, you would have to go to every spot in the page  and change the tag.</p>
+<p>Another disadvantage can be found in this example: say you wanted to  make the above text bold, make the font style Verdana and change its  color to red, you would need a lot of code wrapped around the text:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">font</span> <span style="color: #000066;">color</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;#FF0000&quot;</span> <span style="color: #000066;">face</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;Verdana, Arial,  Helvetica, sans-serif&quot;</span>&gt;</span>
+   <span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">strong</span>&gt;</span>This is  text<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">strong</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">font</span>&gt;</span></pre></td></tr></table></div>
+
+<p>This is verbose and contributes to making your HTML  messy. With CSS, you can create a custom style elsewhere and set all its  properties, give it a unique name and then ‘tag’ your HTML to apply  these stylistic properties:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">p</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;myNewStyle&quot;</span>&gt;</span>My CSS styled text<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">p</span>&gt;</span></pre></td></tr></table></div>
+
+<p>And in between the <head></head> tags at the  top of your web page you would insert this CSS code that defines the  style we just applied:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">style</span> <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;text/css&quot;</span>&gt;</span>
+.myNewStyle {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   color: #FF0000;
+}
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">style</span>&gt;</span></pre></td></tr></table></div>
+
+<p>In the above example we <strong>embed the css code</strong> directly  into the page itself. This is fine for smaller projects or in situations  where the styles you’re defining will only be used in a single page.  There are many times when you will be applying your styles to many pages  and it would be a hassle to have to copy and paste your CSS code into  each page.</p>
+<p>Besides the fact that you will be cluttering up your pages with the  same CSS code, you also find yourself having to edit each of these pages  if you want to make a style change. Like with JavaScript, you can  define/create your CSS styles in a separate file and then link it to the  page you want to apply the code to:</p>
+
+<div class="wp_syntax"><table><tr><td class="code"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">link</span> <span style="color: #000066;">href</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;myFirstStyleSheet.css&quot;</span> <span style="color: #000066;">rel</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;stylesheet&quot;</span>  <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;text/css&quot;</span>&gt;</span></pre></td></tr></table></div>
+
+<p>The above line of code links your external style sheet called  ‘myFirstStyleSheet.css’ to the HTML document. You place this code in  between the &lt;head&gt; &lt;/head&gt;  tags in your web page.</p>
+<div class="next">
+<a href="introductioncss-part2.php" class="button">Intro to CSS Continued &raquo;</a>
+</div>
+	</div>
+
+</article>
+				
+				<div class="social-bottom">
+					<span class='st_facebook_hcount' displayText='Facebook'></span>
+					<span class='st_twitter_hcount' displayText='Tweet'></span>
+					<span class='st_plusone_hcount' displayText='Google +1'></span>
+					<span class='st_reddit_hcount' displayText='Reddit'></span>	
+				</div>
+				
+			</div>
+			<aside class="col-md-3 sidebar">
+				
+                <ul class="widgets">
+				                <li id="text-10" class="widget widget_text"><h4 class="widgettitle">My Book Unlocks the POWER of CSS3!</h4>			<div class="textwidget"><a href="https://www.amazon.com/gp/product/1440341125/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1440341125&linkCode=as2&tag=wwwmontrealma-20&linkId=C5C5TDJUYS25AGUU">
+<img width="100%" src="https://www.how-to-build-websites.com/wp-content/uploads/2015/06/webdesign-start-here.jpg" style="border: 1px solid #D8D8D8" >
+</a>
+
+<p style="text-align: center; margin-top: 15px">Average rating:  <span style="color: #FFC100">&#9733; &#9733; &#9733; &#9733; &#9733;</span></p></div>
+		</li><li id="text-2" class="widget widget_text">			<div class="textwidget"><div class="list first newsletter">
+		<h4>Subscribe to get free CSS tips</h4>
+		<div id="mc_embed_signup">
+			<form action="https://csstutorial.us8.list-manage.com/subscribe/post?u=bbf312731b7cfc4f58a7b3c72&amp;id=f166514f2d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div class="mc-field-group">
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email address">
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;"><input type="text" name="b_bbf312731b7cfc4f58a7b3c72_f9f2ce6f08" value=""></div>
+				<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="button">
+			</form>
+		</div>
+	</div>
+<div class="social-side">
+<span class="st_facebook_vcount" displayText="Facebook"></span>
+		    <span class="st_twitter_vcount" displayText="Tweet"></span>
+		    <span class="st_googleplus_vcount" displayText="Google +"></span>
+</div></div>
+		</li><li id="text-12" class="widget widget_text">			<div class="textwidget"><a href="https://shop.killervideostore.com/">
+<img src="https://www.csstutorial.net/wp-content/uploads/2016/09/learnCSS3.jpg" >
+</a></div>
+		</li><li id="text-4" class="widget widget_text">			<div class="textwidget"><div class="university2">
+		<h3>Learn CSS, CSS3 and more!</h3>
+		<p>Access a video tutorial library of over
+		1100+ videos for <strong>$9.99 a month!</strong><br/>
+		<a href="https://webmentor.org/">click here!</a></p>
+	</div></div>
+		</li><li id="text-5" class="widget widget_text">			<div class="textwidget"><div class="libraryad">
+<a href="https://www.studioweb.com/" target="_blank" rel="noopener noreferrer">
+<p>Studioweb: teach JavaScript, HTML5 and CSS3 without knowing how to code!</p>
+<button>Learn More</button>
+</a>
+</div></div>
+		</li><li id="categories-3" class="widget widget_categories"><h4 class="widgettitle">CSS Tutorials, Videos and News</h4>		<ul>
+				<li class="cat-item cat-item-5"><a href="https://www.csstutorial.net/category/css-basics" title="Articles, videos and podcasts on basic CSS.">CSS Basics</a> (29)
+</li>
+	<li class="cat-item cat-item-6"><a href="https://www.csstutorial.net/category/css-fonts" title="How to manipulate fonts with CSS.">CSS Fonts</a> (5)
+</li>
+	<li class="cat-item cat-item-7"><a href="https://www.csstutorial.net/category/css-misc">CSS Misc</a> (21)
+</li>
+	<li class="cat-item cat-item-8"><a href="https://www.csstutorial.net/category/css-page-layouts" title="Articles, videos and podcasts on creating page layouts with CSS.">CSS Page Layouts</a> (12)
+</li>
+	<li class="cat-item cat-item-9"><a href="https://www.csstutorial.net/category/css-training">CSS Training</a> (14)
+</li>
+	<li class="cat-item cat-item-10"><a href="https://www.csstutorial.net/category/css-video-tutorial">CSS Videos</a> (85)
+<ul class='children'>
+	<li class="cat-item cat-item-16"><a href="https://www.csstutorial.net/category/css-video-tutorial/css-closed-captioned-videos">CSS Closed Captioned Videos</a> (20)
+</li>
+	<li class="cat-item cat-item-11"><a href="https://www.csstutorial.net/category/css-video-tutorial/html5-css3-and-jquery-videos">HTML5 CSS3 and jQuery Videos</a> (15)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://www.csstutorial.net/category/killer-css-tips-tricks" title="A collection of CSS techniques and tips.">Killer CSS Tips and Tricks</a> (30)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://www.csstutorial.net/category/news">News</a> (20)
+</li>
+	<li class="cat-item cat-item-14"><a href="https://www.csstutorial.net/category/studioweb">Studioweb</a> (10)
+</li>
+	<li class="cat-item cat-item-15"><a href="https://www.csstutorial.net/category/video-podcast-blog">Video Blog and Podcasts</a> (5)
+</li>
+		</ul>
+			</li><li id="text-8" class="widget widget_text"><h4 class="widgettitle">Video Subscriptions</h4>			<div class="textwidget"><ul>
+			<li><a href="https://webmentor.org/">Webmentor - Become a web developer!</a></li>
+			<li><a href="https://www.studioweb.com/">StudioWeb - Teach Coding</a></li>
+		</ul></div>
+		</li><li id="text-9" class="widget widget_text"><h4 class="widgettitle">KillerSites Network</h4>			<div class="textwidget"><ul>
+<li><a href="https://www.killersites.com/">KillerSites</a></li>
+			<li><a href="http://how-to-build-websites.com/">How To Build Websites</a></li>
+			<li><a href="https://www.killerphp.com">KillerPHP</a></li>
+		</ul></div>
+		</li>                                </ul>
+				
+			</aside>
+		
+		</div>
+	</div>
+</section>
+
+
+	<section id="social">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-xs-8">
+	                <ul class="social">
+	                    <li><a target="_blank" href="https://www.facebook.com/pages/Killersites/247915087277"><img src="https://www.csstutorial.net/wp-content/themes/killersites/images/social-facebook.png" alt="Facebook"></a></li>
+	                    <li><a target="_blank" href="https://twitter.com/killersites"><img src="https://www.csstutorial.net/wp-content/themes/killersites/images/social-twitter.png" alt="Twitter"></a></li>
+	                    <li><a target="_blank" href="https://plus.google.com/u/0/104516324687483231020/posts"><img src="https://www.csstutorial.net/wp-content/themes/killersites/images/social-google.png" alt="Google+"></a></li>
+	                    <li><a target="_blank" href="https://www.youtube.com/user/killerphp"><img src="https://www.csstutorial.net/wp-content/themes/killersites/images/social-youtube.png" alt="YouTube"></a></li>
+	                    <li class="text">Stay connected with KillerSites</li>
+	                </ul>
+	            </div>
+	            <div class="col-xs-4 text-right">
+	                <a href="#top" id="pagetop">Top of Page</a>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	
+	<footer id="pagefooter">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-5 col-sm-12">
+	                <h4>Teach CSS in your classroom</h4>
+	                <p><a href="https://www.studioweb.com">StudioWeb</a></p> 
+					
+	            </div>
+	            <div class="col-md-2 col-sm-6">
+	            	<h4>Categories</h4>
+	                <ul id="menu-footer-col-1" class="menu"><li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="https://www.csstutorial.net/category/css-basics/">CSS Basics</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="https://www.csstutorial.net/category/killer-css-tips-tricks/">Tips and Tricks</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="https://www.csstutorial.net/category/css-page-layouts/">Page Layouts</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="https://www.csstutorial.net/category/css-misc/">Misc</a></li>
+<li id="menu-item-16" class="navgap menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a target="_blank" rel="noopener noreferrer" href="https://www.killersites.com/">KillerSites.com</a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a target="_blank" rel="noopener noreferrer" href="https://how-to-build-websites.com/">Beginners Web Design</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a target="_blank" rel="noopener noreferrer" href="https://www.killervideostore.com/">Video Tutorial Store</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a target="_blank" rel="noopener noreferrer" href="https://shop.killervideostore.com/">Interactive Web Developer Course</a></li>
+</ul>	            </div>
+	            <div class="col-md-2 col-sm-6">
+	            	<h4>Misc. Pages</h4>
+	                <ul id="menu-footer-col-2" class="menu"><li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a target="_blank" rel="noopener noreferrer" href="https://www.killersites.com/web-hosting/">Hosting Guide</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21"><a target="_blank" rel="noopener noreferrer" href="https://www.killersites.com/community/">Participate on the Forums</a></li>
+<li id="menu-item-22" class="navgap menu-item menu-item-type-custom menu-item-object-custom menu-item-22"><a target="_blank" rel="noopener noreferrer" href="https://www.killersites.com/contact/">Contact &#038; Support</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a target="_blank" rel="noopener noreferrer" href="https://www.killersites.com/about/">About KillerSites</a></li>
+</ul>	            </div>
+	            <div class="col-md-3 col-sm-12">
+	                <div class="phone">1.855.932.8091</div>
+	                <div class="copyright">&copy; 1996 - 2019 KillerSites. All rights reserved.</div>
+	            </div>
+	        </div>
+	    </div>
+	</footer>    
+	
+	
+	<!-- scripts for Social Buttons (ShareThis.com) -->
+	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "c20390ae-dc8d-4461-8248-c96ac3043189"}); </script>
+	
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-32571128-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+	<script type='text/javascript' src='https://www.csstutorial.net/wp-content/themes/killersites/js/bootstrap.min.js?ver=20141212'></script>
+<script type='text/javascript' src='https://www.csstutorial.net/wp-content/themes/killersites/js/actions.js?ver=20141212'></script>
+<script type='text/javascript' src='https://www.csstutorial.net/wp-includes/js/wp-embed.min.js?ver=5.2.3'></script>
+	
+</body>
+</html>

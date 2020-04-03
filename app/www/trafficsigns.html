@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>drivesafe</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            
+          <div class="menu-head"><h1>drive<span>safe</span></h1></div>
+            <h1 class="close-slide icon-only close-panel">x</h1>
+            <h1>MENU</h1>
+            <p class="menulist homepage">Home</p>
+            <p class="menulist menulist1">Basic Traffic Light Rules</p>
+            <p class="menulist road-rules">Basic Road Safety Rules</p>
+            <p class="menulist drivingtips">Driving Tips and Tricks</p>
+            <p class="menulist traficsigns">Traffic Signs</p>
+            <p class="menulist interactivetest">Road Safety Interactive Quiz</p>
+            
+            
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><div class="main-logo-nav1"><h1>drive<span>safe</span></h1></div></div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content home">
+                     <!--<div class="content-block">-->
+                        <div class="roadrules-content">
+                            
+                            <h2 class="trafficsigns-head">Traffic Signals and their Meaning</h2>
+                            
+                            <div class="roadsign-banner">
+                                <div class="sign-img-holder">
+                                    <div class="sign-img sign-img1"></div>
+                                    <div class="sign-img sign-img2"></div>
+                                    <div class="sign-img sign-img3"></div>
+                                    <div class="sign-img sign-img4"></div>
+                                    <div class="sign-img sign-img5"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="div-writeup">
+                                <p>Whether you are studying for your driver’s exam or saw an unusual sign that you do not remember, it is always a good idea to familiarize yourself with it. Recognizing traffic signs and knowing their meanings can help drivers make safe driving decisions faster and more easily.</p>
+                                <p>Here are 10 popular traffic signs and their meanings:</p>
+                                
+                                <ol class="floating-image-list in-section-list">
+                                    <li style="padding: 10px 0">
+                                        
+                                        <img style="width: 110px; height: 100px; padding: 40px 20px;" alt="Deer Crossing Sign;" src="images/traffic-signs-1.png"/>
+                                        <a href="#"><strong>Deer Crossing Sign</strong></a>
+                                        <p>This road warning sign is not an opportunity to ask why the deer crossed the road. As defined by the Manual on Uniform Traffic Control Devices (MUTCD) by the Federal Highway Administration, the MUTCD W11-3 deer crossing sign alerts drivers to areas where the population of deer is active and may enter the roadway.</p>
+                                        <p>An average white-tailed deer, which is common throughout North America, weighs around 100 pounds and is about three or four feet tall.</p>
+                                        <p>Seeing a deer of this size on the road is a very serious situation, and as a warning, deer crossing signs can help drivers pass safely through these areas.</p>
+                                    </li>
+                                    
+                                    <li style="padding: 10px 0">
+                                        <img style="width: 110px; height: 100px; padding: 30px 20px;" alt="Emergency Vehicle Warning Sign;" src="images/traffic-signs-2.png"><a href="#"><strong>Emergency Vehicle Warning Signs</strong></a>
+                                        <p>Possibly the least frequently seen warning sign on the list of traffic signs and their meanings, the emergency vehicle warning sign is one of the most important.</p>
+                                        <p>Similar to the deer crossing signs in shape and design, MUTCD W11-8 signs alert drivers to upcoming fire departments, ambulance stations, and other areas where emergency vehicles could be entering the roadway with limited warning to drivers.</p>
+                                        <p>Drivers should also refrain from pulling over in these areas to keep it clear for emergency vehicles to pull in and out of the station.</p>
+                                    </li>
+                                    
+                                    <li style="padding: 10px 0">
+                                        <img style="width: 110px; height: 100px; padding: 15px 20px;" alt="Keep Right Sign;" src="images/traffic-signs-3.png"><a href="#"><strong>Keep Right Sign</strong></a>
+                                        <p>When a road narrows, due to dividers or other obstructions, drivers need to be made aware of the change in the path of the roadway.</p>
+                                        <p>MUTCD R4-7 and MUTCD R4-8 are the “keep right” and “keep left” versions of the same obstruction warning. These regulatory traffic signs aid in the flow of vehicles when these slight obstacles are present.</p>
+                                    </li>
+                                    
+                                    <li style="padding: 10px 0">
+                                        <img style="width: 110px; height: 100px; padding: 20px 20px;" alt="Men at Work Sign;" src="images/traffic-signs-4.png"><a><strong>Men at Work Signs</strong></a>
+                                        <p>MUTCD W21-1 is a temporary warning sign used to alert drivers of upcoming road work. Orange is used on this sign because it is one of the most visible colors to the human eye, and can be noticed above other traffic signs on the road.</p>
+                                        <p>When driving through work zones, safe driving is at its highest premium. Men at work signs are generally accompanied by other temporary warning signs, such as “road work ahead” signs and “detour” signs.</p>
+                                    </li>
+                                    
+                                    <li style="padding: 10px 0">
+                                        <img style="width: 110px; height: 100px; padding: 20px 20px;" alt="No Bicycle Sign;" src="images/traffic-signs-5.png"><a><strong>No Bicycle Signs</strong></a>
+                                        <p>Bicycle riders are subject to many of the same traffic control signs that drivers are on the roadways.</p>
+                                        <p>No bicycle signs, MUTCD R5-6, prohibit bicycle traffic from entering a roadway or facility. If used at a facility, these signs should be posted at the entrances.</p>
+                                        <p>Other bicycle-related traffic signs are <i>no parking bike lane signs</i></a> (MUTCD R7-9) and <i>bicycle warning signs</i> (MUTCD W11-1).</p>
+                                    </li>
+                                    <li style="padding: 10px 0">
+                                        <img style="width: 110px; height: 100px; padding: 5px 20px;" alt="No U-Turn Sign;" src="images/traffic-signs-6.png"><a href="#"><strong>No U-Turn Signs</strong></a>
+                                        <p>There are a few variations of a no U-turn sign, but the example shown here is the official MUTCD version (MUTCD R3-4). With the curved arrow showing a U-turn and bold prohibition symbol over it, this standard design is understood to express areas where drivers cannot change the direction of their vehicle into the opposite direction.</p>
+                                    </li>
+                                    <li style="padding: 10px 0">
+                                        <img style="width: 110px; height: 100px; padding: 15px 20px;" alt="Pedestrian Crossing Sign;" src="images/traffic-signs-7.png"><a href="#"><strong>Pedestrian Crossing Signs</strong></a>
+                                        <p>There are a few MUTCD versions of pedestrian crossing signs that are posted near crosswalks and intersections.</p>
+                                        <p>MUTCD W11-2 is used in a majority of settings, and is pictured here. MUTCD S1-1 is a <i>pedestrian school area sign</i>, and is posted in school zones. Both signs use a yellow-green fluorescent reflective sheeting that enhances its visibility on the roads.</p>
+                                    </li>
+                                    <li style="padding: 10px 0">
+                                        <img style="width: 100px; height: 110px; padding: 35px 20px;" alt="Speed Limit Sign;" src="images/traffic-signs-8.png"><a><strong>Speed Limit Signs</strong></a>
+                                        <p>Speed limit signs are essential traffic control signs, and can vary in the limit depending on the specific state that you are driving though.</p>
+                                        <p>Often while driving through residential streets, speed limit signs may not be seen. This is because the speed limit for most residential areas is 25 miles per hour, and this law is understood by drivers who pass their driving exams.</p>
+                                        <p>Many highways have speed limits set at 55 miles per hour, but this can be changed by the state and will vary. Other common limits on highways are 45 miles per hour and 65 miles per hour.</p>
+                                    </li>
+                                    <li style="padding: 10px 0">
+                                        <img style="width: 110px; height: 100px; padding: 30px 20px;" alt="Stop Sign;" src="images/traffic-signs-9.png"><a href="#"><strong>Stop Signs</strong></a>
+                                        <p>Stop signs (MUTCD R1-1) are likely the most iconic of all traffic signs. Both the shape and color are important to how a stop sign is recognized and understood.</p>
+                                        <p>No other sign is of an octagon shape, and no other sign is red in color. This is done because of the importance a stop sign has on traffic safety.</p>
+                                        <p>Stop signs alert drivers to intersections and other areas where traffic may be traveling in opposite or crossing directions.</p>
+                                    </li>
+                                    <li style="padding: 10px 0">
+                                        <img style="width: 110px; height: 100px; padding: 10px 20px;" alt="Yield Sign;" src="images/traffic-signs-10.png"><a><strong>Yield Signs</strong></a>
+                                        <p>Yield signs (MUTCD R1-2) are similar to stop signs, but used in less dangerous situations. Used at passive cross streets or traffic circles, yield signs help to keep traffic flowing, while still allowing drivers from different directions to pass through.</p>
+                                        <p>The yield sign symbol is often used with <i>pedestrian crossing signs</i> where it is the state law to yield to pedestrians in the crosswalk. They can also be found on <i>in-street crossing signs</i>.</p>
+                                    </li>
+                                </ol>
+                                
+                                </ol>
+
+                            </div><!-- End of div writeup-->
+                            
+                            
+                        
+                            
+                         </div>
+                            
+                            
+                    <!-- </div>-->
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbarr">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link icon-only open-panel">MENU</a>
+                    <a href="#" class="link" id="logout">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+     <script type="text/javascript" src="js/style.js"></script>
+     <script type="text/javascript" src="js/func.js"></script>
+</body>
+
+</html>

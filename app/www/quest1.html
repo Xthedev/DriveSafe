@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>drivesafe</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            
+          <div class="menu-head"><h1>drive<span>safe</span></h1></div>
+            <h1 class="close-slide icon-only close-panel">x</h1>
+            <h1>MENU</h1>
+            <p class="menulist homepage">Home</p>
+            <p class="menulist menulist1">Basic Traffic Light Rules</p>
+            <p class="menulist road-rules">Basic Road Safety Rules</p>
+            <p class="menulist drivingtips">Driving Tips and Tricks</p>
+            <p class="menulist traficsigns">Traffic Signs</p>
+            <p class="menulist interactivetest">Road Safety Interactive Quiz</p>
+            
+            
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><div class="main-logo-nav1"><h1>drive<span>safe</span></h1></div></div>
+                    <!--
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                    -->
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content home">
+                     <!--<div class="content-block">-->
+                        <div class="roadrules-content">
+                            
+                            <div class="question-container">
+                                <h2 style="color:#393f39; padding-left:8px;">
+                                    Road Safety Quiz<br/><small style="block">Can you answer these questions?</small>
+                                </h2>
+                                
+                                <!-- Question-Content1 div -->
+                                <div class="question-content question-content1">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">1</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 1</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next1" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content1 div -->
+                                
+                                
+                                <!-- Question-Content2 div -->
+                                <div class="question-content question-content2">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">2</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 2</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next2" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content2 div -->
+                                
+                                
+                                <!-- Question-Content3 div -->
+                                <div class="question-content question-content3">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">3</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 3</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next3" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content3 div -->
+                                
+                                
+                                <!-- Question-Content4 div -->
+                                <div class="question-content question-content4">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">4</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 4</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next4" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content4 div -->
+                                
+                                
+                                <!-- Question-Content5 div -->
+                                <div class="question-content question-content5">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">5</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 5</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next5" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content5 div -->
+                                
+                                
+                                <!-- Question-Content6 div -->
+                                <div class="question-content question-content6">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">6</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 6</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next6" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content6 div -->
+                                
+                                
+                                <!-- Question-Content7 div -->
+                                <div class="question-content question-content7">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">7</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 7</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next7" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content7 div -->
+                                
+                                
+                                <!-- Question-Content8 div -->
+                                <div class="question-content question-content8">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">8</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 8</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next8" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content8 div -->
+                                
+                                
+                                <!-- Question-Content9 div -->
+                                <div class="question-content question-content9">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">9</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 9</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next9" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content9 div -->
+                                
+                                
+                                <!-- Question-Content10 div -->
+                                <div class="question-content question-content10">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">10</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 10</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next10" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content10 div -->
+                                
+                                
+                                <!-- Question-Content11 div -->
+                                <div class="question-content question-content11">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">11</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 11</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next11" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content11 div -->
+                                
+                                
+                                <!-- Question-Content12 div -->
+                                <div class="question-content question-content12">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">12</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 12</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next12" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content12 div -->
+                                
+                                
+                                <!-- Question-Content13 div -->
+                                <div class="question-content question-content13">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">13</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 13</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next13" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content13 div -->
+                                
+                                
+                                <!-- Question-Content14 div -->
+                                <div class="question-content question-content14">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">14</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 14</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next14" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content14 div -->
+                                
+                                
+                                <!-- Question-Content15 div -->
+                                <div class="question-content question-content15">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Question</div>
+                                            <div class="calendarday">15</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Question 15</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Choose the correct answer
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                        You can save your child from becoming entrapped in a vehicle’s trunk by…
+                                    </p>
+                                    
+                                    <input type="radio" id="choiceA" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceB" name="trunk" required   style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (B) Keeping the car keys out of children’s reach at all times
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceC" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (C) Supervising children when they are around cars
+                                    </label> <br/>
+                                    
+                                    <input type="radio" id="choiceD" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (D) Closing the fold-down rear seats to prevent kids from getting into the trunk
+                                    </label> <br/>
+                                
+
+                                    <input type="radio" id="choiceE" name="trunk" required  style="margin-left:13px;height:14px;width:14px;"/>
+                                    <label class="quizlabel">
+                                        (E) All of the above
+                                    </label> <br/>
+                                    
+                                    <div class="question-footer">
+                                        <button class="submitbtn" id="next15" type="submit">NEXT</button>
+                                    </div>
+                                    
+                                </div>
+                            <!-- End of Question-content15 div -->
+                                
+                                
+                                
+                                
+                                
+                                <!-- Question-Content16 ie. Result Page div -->
+                                <div class="question-content question-content16">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule">
+                                            <div class="calendarmonth">Quiz</div>
+                                            <div class="calendarday">Result</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <p class="calendartitle">
+                                        <strong>Driving Safety Quiz > Result</strong>
+                                    </p>
+                                    
+                                    <p style="margin-bottom:10px;font-size:16px;line-height:133%;font-weight: bold;">
+                                        <em style="font-weight:bold;color:rgb(213,147,72);">
+                                            Your Result
+                                        </em>
+                                    </p>
+                                    
+                                    <p style="font-size:18px;">
+                                       Your total score is ....
+                                    </p>
+                                    
+                                    
+                                    <label class="quizlabel">
+                                        (A) Teaching them not to play in and around cars
+                                    </label> <br/>
+                                    
+                                    
+                                    
+                                </div>
+                            <!-- End of Question-content16 ie. Answer page div -->
+                                
+                                
+                                
+                
+                               
+                                
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            <div class="div-writeup">
+                                
+                                
+                                
+                                
+                                
+                                 
+                                     
+                                     
+                                     
+                            
+                                     <center>
+                                        <div>
+                                            <a class="nav-back2top" href="#top" style="font-weight:600; color:black;">
+                                                <i class="nav-back2top-arrow">^</i>
+                                                <br/>TOP OF PAGE
+                                            </a>
+                                        </div>
+                                        <br/><br/>
+                                     </center>
+                                     
+                                     
+                                     
+                        </div>
+                                     
+                                
+                            
+                    </div>
+                            
+                            
+                    <!-- </div>-->
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbarr">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link" id="exit-quiz">EXIT QUIZ</a>
+                    <a href="#" class="link" id="logout">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+     <script type="text/javascript" src="js/style.js"></script>
+     <script type="text/javascript" src="js/func.js"></script>
+</body>
+
+</html>

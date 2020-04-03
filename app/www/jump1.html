@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>drivesafe</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            
+          <div class="menu-head"><h1>drive<span>safe</span></h1></div>
+            <h1 class="close-slide icon-only close-panel">x</h1>
+            <h1>MENU</h1>
+            <p class="menulist homepage">Home</p>
+            <p class="menulist menulist1">Basic Traffic Light Rules</p>
+            <p class="menulist road-rules">Basic Road Safety Rules</p>
+            <p class="menulist drivingtips">Driving Tips and Tricks</p>
+            <p class="menulist traficsigns">Traffic Signs</p>
+            <p class="menulist interactivetest">Road Safety Interactive Quiz</p>
+            
+            
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><div class="main-logo-nav1"><h1>drive<span>safe</span></h1></div></div>
+                    <!--
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                    -->
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="jump2quest" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content home">
+                     <!--<div class="content-block">-->
+                        <div class="roadrules-content">
+                            
+                            <div class="question-container">
+                                <h2 id="h2top" style="color:#393f39; padding-left:8px;">
+                                    Road Safety Quiz<br/><small style="block">Can you answer these questions?</small>
+                                </h2>
+                                
+                                <!-- Question-Content1 div -->
+                                <div class="question-contentjump animateup jump2ques1">
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 1</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                            Which of the following causes the most deaths among children in and around cars?<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  Frontovers<br/>
+                                                (B)  Backovers<br/>
+                                                (C)  Heat Stroke<br/>
+                                                (D)  Fall from vehicle<br/>
+                                            </div>
+                                            <div class="hint">
+                                                <div style="color:#819433;margin-bottom:12px;">Hint:</div>
+                                                <div style="margin-bottom:20px;">
+                                                    Car mirrors can help prevent these.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:294px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH1" class="AnswerH AnswerH1">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV1">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (B)  <b>Backovers</b>
+                                            </div>
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            Backovers comprise 34% of all non-traffic automobile fatalities among children. Frontovers are responsible for 30% of these fatalities; heat strokes, 16%; underage drivers, 7%; setting the vehicle in motion, 7%, drowning and/or falling from the vehicle, 2%; and other reasons, 4%. Backover accidents occur when a driver blindly backs out of a parking space or driveway, and doesn’t notice a child behind the car.
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques1">Next Question ></button>
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li><a class="nextques1" href="#">2</a></li>
+                                        <li><a class="nextques2" href="#">3</a></li>
+                                        <li><a class="nextques3" href="#">4</a></li>
+                                        <li><a class="nextques4" href="#">5</a></li>
+                                        <li><a class="nextques5" href="#">6</a></li>
+                                        <li><a class="nextques6" href="#">7</a></li>
+                                        <li><a class="nextques7" href="#">8</a></li>
+                                        <li><a class="nextques8" href="#">9</a></li>
+                                        <li><a class="nextques9" href="#">10</a></li>
+                                        <li><a class="nextques10" href="#">11</a></li>
+                                        <li><a class="nextques11" href="#">12</a></li>
+                                        <li><a class="nextques12" href="#">13</a></li>
+                                        <li><a class="nextques13" href="#">14</a></li>
+                                        <li><a class="nextques14" href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 1 div -->
+                                
+                                
+                            
+                            <!-- Question-Content2 div -->
+                                <div class="jump2ques2">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 2</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                            The blind zone is the area…<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  Behind any vehicle that causes backover accidents<br/>
+                                                (B)  Near any vehicle that is invisible to the driver when changing lanes<br/>
+                                                (C)  Any place around the car when the driver’s eyes are closed<br/>
+                                                (D)  Opposite the end zone<br/>
+                                            </div>
+                                            <div class="hint">
+                                                <div style="color:#819433;margin-bottom:12px;">Hint:</div>
+                                                <div style="margin-bottom:20px;">
+                                                    Driving in reverse can limit a driver’s visibility.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:294px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH2" class="AnswerH AnswerH2">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV2">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (A)  <b>Behind any vehicle that causes backover accidents</b>
+                                            </div>
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            Kidsandcars.org defines the “blind zone” as the area behind the vehicle that is largely responsible for backover accidents. It is also the area in front of the vehicle contributing to frontover accidents. The area next to a vehicle that cannot be seen through rear-view mirrors is the “blind spot.” In general, the blind zone for most vehicles measures 7 -8 feet wide and 20 – 30 feet long.
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques2">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li><a class="nextques1" href="#">2</a></li>
+                                        <li><a class="nextques2" href="#">3</a></li>
+                                        <li><a class="nextques3" href="#">4</a></li>
+                                        <li><a class="nextques4" href="#">5</a></li>
+                                        <li><a class="nextques5" href="#">6</a></li>
+                                        <li><a class="nextques6" href="#">7</a></li>
+                                        <li><a class="nextques7" href="#">8</a></li>
+                                        <li><a class="nextques8" href="#">9</a></li>
+                                        <li><a class="nextques9" href="#">10</a></li>
+                                        <li><a class="nextques10" href="#">11</a></li>
+                                        <li><a class="nextques11" href="#">12</a></li>
+                                        <li><a class="nextques12" href="#">13</a></li>
+                                        <li><a class="nextques13" href="#">14</a></li>
+                                        <li><a class="nextques14" href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 2 div -->
+                                
+                                
+                            <!-- Question-Content3 div -->
+                                <div class="jump2ques3">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 3</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                            What is the best way for you, as a driver, to prevent backover accidents?<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  Every time you back up a vehicle, ask someone to stand outside the car and guide you, to warn you of people and objects behind the car<br/>
+                                                (B)  Always drive forward and never in reverse<br/>
+                                                (C)  Get out of your vehicle and check behind it just before you back up<br/>
+                                                (D)  Only ride a motorcycle<br/>
+                                            </div>
+                                            <div class="hint">
+                                                <div style="color:#819433;margin-bottom:12px;">Hint:</div>
+                                                <div style="margin-bottom:20px;">
+                                                    Help yourself.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:364px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH3" class="AnswerH AnswerH3">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV3">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (C)  <b> Get out of your vehicle and check behind it just before you back up</b>
+                                            </div>
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            Kidsandcars.org considers getting out of the vehicle to check behind just before backing up to be the best defense against backover accidents.
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques3">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li><a class="nextques1" href="#">2</a></li>
+                                        <li><a class="nextques2" href="#">3</a></li>
+                                        <li><a class="nextques3" href="#">4</a></li>
+                                        <li><a class="nextques4" href="#">5</a></li>
+                                        <li><a class="nextques5" href="#">6</a></li>
+                                        <li><a class="nextques6" href="#">7</a></li>
+                                        <li><a class="nextques7" href="#">8</a></li>
+                                        <li><a class="nextques8" href="#">9</a></li>
+                                        <li><a class="nextques9" href="#">10</a></li>
+                                        <li><a class="nextques10" href="#">11</a></li>
+                                        <li><a class="nextques11" href="#">12</a></li>
+                                        <li><a class="nextques12" href="#">13</a></li>
+                                        <li><a class="nextques13" href="#">14</a></li>
+                                        <li><a class="nextques14" href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 3 div -->
+                                
+                                
+                                
+                            <!-- Question-Content4 div -->
+                                <div class="jump2ques4">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 4</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           Estimate how many children die every year as a result of prolonged heat exposure in cars?<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  10<br/>
+                                                (B)  38<br/>
+                                                (C)  50<br/>
+                                                (D)  55<br/>
+                                            </div>
+                                            <div class="hint">
+                                                <div style="color:#819433;margin-bottom:12px;">Hint:</div>
+                                                <div style="margin-bottom:20px;">
+                                                    Number of slots in an American Roulette wheel.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:350px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH4" class="AnswerH AnswerH4">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV4">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (B)  <b> 38</b>
+                                            </div>
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            As per kidsandcars.org, on average, 38 children die each year because of excessive heat exposure. Often parents and caregivers forget their kids behind who are then trapped inside the vehicle for hours together. Children’s bodies heat up three to five times faster than adults’. The temperature inside a parked car, even when the windows are partially down, can reach 125 degrees within minutes. Even when the windows are left slightly open, the temperature can still rise inside the car and does not slow down the heating process.
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques4">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 4 div -->
+                                
+                                
+                                
+                            <!-- Question-Content5 div -->
+                                <div class="jump2ques5">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 5</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           Your child cannot have a heatstroke if you leave him/her in the car with windows slightly rolled down for cross-ventilation.<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  True<br/>
+                                                (B)  False<br/>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:310px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH5" class="AnswerH AnswerH5">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV5">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (B)  <b> False</b>
+                                            </div>
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            Children’s bodies heat up three to five times faster than adults’. The temperature inside a parked car, even when the windows are partially down, can reach 125 degrees within minutes. Even when the windows are left slightly open, the temperature can still rise inside the car without slowing the heating process.
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques5">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 5 div -->
+                                
+                                
+                                
+                            <!-- Question-Content6 div -->
+                                <div class="jump2ques6">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 6</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           What should you do to make sure you never forget your child when you get out of the car?<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  Never travel with a child<br/>
+                                                (B)  Put your child in the front seat of the vehicle so that you can see him/her at all times<br/>
+                                                (C)  Always open the back door of the vehicle every time you reach your destination, to check if you’ve left anything or anyone behind<br/>
+                                                (D)  Add a reminder on your phone<br/>
+                                             </div>
+                                            <div class="hint">
+                                                <div style="color:#819433;margin-bottom:12px;">Hint:</div>
+                                                <div style="margin-bottom:20px;">
+                                                   Checking the car thoroughly every time you reach your destination is a good practice.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:420px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH6" class="AnswerH AnswerH6">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV6">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (C)  <b> Always open the back door of the vehicle every time you reach your destination, to check if you’ve left anything or anyone behind</b>
+                                            </div>
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            Kidsandcars.org recommends the following guidelines to follow to avoid leaving children unattended.<br/>
+
+                                            - Never leave children alone inside or outside cars, even for a minute.<br/>
+                                            - Always keep things like briefcases, backpacks, or anything else that you might need in the backseat of the vehicle.<br/>
+                                            - If you see a child alone in a vehicle, call 911 or your local emergency number. Don’t leave the child unattended even when he/she is not yours.<br/>
+                                            - Open the back door of the vehicle every time you reach your destination. Get into this habit even when you’re traveling alone.<br/>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques6">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 6 div -->
+                                
+                                
+                                
+                            <!-- Question-Content7 div -->
+                                <div class="jump2ques7">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 7</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                          Which of the following is a common cause of death related to unintentional trunk entrapment deaths?<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  Hyperthermia<br/>
+                                                (B)  Asphyxiation<br/>
+                                                (C)  Both a and b<br/>
+                                                (D)  None of the above<br/>
+                                             </div>
+                                            <div class="hint">
+                                                <div style="color:#819433;margin-bottom:12px;">Hint:</div>
+                                                <div style="margin-bottom:20px;">
+                                                   Both suffocation and heat pose a hazard to life.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:420px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH7" class="AnswerH AnswerH7">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV7">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (C)  <b> Both a and b</b>
+                                            </div>
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            Hyperthermia is a condition where the body temperature rises beyond normal. It happens when the body absorbs or produces more heat than it can dissipate. Heatstroke, a severe case of hyperthermia, occurs as a result of prolonged exposure to heat and humidity. Asphyxiation occurs when the supply of oxygen drops to a level where an individual cannot breathe normally. According to Kids And Cars, hyperthermia (heatstroke) or hyperthermia with asphyxiation are the most common causes of death related to unintentional trunk entrapment.
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques7">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 7 div -->
+                                
+                                
+                            <!-- Question-Content8 div -->
+                                <div class="jump2ques8">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 8</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           In which of the following events can a child get entrapped in a car’s trunk?<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  When he/she is playing inside the car<br/>
+                                                (B)  When he/she is retrieving objects from the trunk<br/>
+                                                (C)  When he/she is being kidnapped or assaulted<br/>
+                                                (D)  When he/she is playing a prank on parents or friends<br/>
+                                                (E)  All of the above<br/>
+                                             </div>
+                                            <div class="hint">
+                                                <div style="color:#819433;margin-bottom:12px;">Hint:</div>
+                                                <div style="margin-bottom:20px;">
+                                                   ____ or nothing.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:420px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH8" class="AnswerH AnswerH8">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV8">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (E)  <b> All of the above</b>
+                                            </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques8">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 8 div -->
+                                
+                                
+                                
+                            <!-- Question-Content9 div -->
+                                <div class="jump2ques9">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 9</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           You can save your child from becoming entrapped in a vehicle’s trunk by…<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  Teaching them not to play in and around cars<br/>
+                                                (B)  Keeping the car keys out of children’s reach at all times<br/>
+                                                (C) Supervising children when they are around cars<br/>
+                                                (D)  Closing the fold-down rear seats to prevent kids from getting into the trunk<br/>
+                                                (E)  All of the above<br/>
+                                             </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:420px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH9" class="AnswerH AnswerH9">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV9">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (E)  <b> All of the above</b>
+                                            </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques9">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 9 div -->
+                                
+                                
+                            
+                            <!-- Question-Content10 div -->
+                                <div class="jump2ques10">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 10</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           Power windows were created with a safety first approach and pose no danger to children.<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  True<br/>
+                                                (B)  False<br/>
+                                             </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:270px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH10" class="AnswerH AnswerH10">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV10">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (B)  <b> False</b>
+                                            </div>
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            According to a study conducted by the National Highway Traffic Safety Administration, nearly 1,000 children are treated in emergency rooms each year due to injuries sustained as a result of power windows. Oftentimes, parents roll down power windows to keep their car cool without realizing that their children may peek out the window and accidentally roll up the window (usually with a leaning knee) with their head still outside the car window. A new rule instated by the NHTSA requires that all passenger vehicles manufactured for sale in the United States, on or after October 1, 2008, be equipped with a safer switch.
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques10">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 10 div -->
+                                
+                                
+                                
+                            <!-- Question-Content11 div -->
+                                <div class="jump2ques11">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 11</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           Children in which of the following age groups should be placed in a rear-facing car seat?<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  0 to 1 year<br/>
+                                                (B)   1 to 4 years<br/>
+                                                (C) 4 to 8 years<br/>
+                                                (D)  All of the above<br/>
+                                             </div>
+                                            <div class="hint">
+                                                <div style="color:#819433;margin-bottom:12px;">Hint:</div>
+                                                <div style="margin-bottom:20px;">
+                                                   We generally sing lullabies to them.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:380px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH11" class="AnswerH AnswerH11">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV11">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (A)  <b> 0 to 1 year</b>
+                                            </div>
+                                            
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            According to the Centers for Disease Control and Prevention (CDC), children under the age of 1 and weighing a minimum of 20 lbs. should be placed in the backseat, in a rear-facing child safety seat. According to the National Highway Traffic Safety Administration, the child safety seat should be securely attached to the vehicle by a latch system or safety belts.
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques11">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 11 div -->
+                                
+                                
+                            
+                            <!-- Question-Content12 div -->
+                                <div class="jump2ques12">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 12</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           Children in which of the following age groups should be seated in a front-facing safety seat?<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)   0 to 1 year<br/>
+                                                (B)   1 to 4 years<br/>
+                                                (C)   4 to 8 years<br/>
+                                                (D)   8 years and above<br/>
+                                              </div>
+                                            <div class="hint">
+                                                <div style="color:#819433;margin-bottom:12px;">Hint:</div>
+                                                <div style="margin-bottom:20px;">
+                                                   Children in this age group begin to climb stairs, jump etc.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:380px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH12" class="AnswerH AnswerH12">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV12">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (B)  <b> 1 to 4 years</b>
+                                            </div>
+                                            
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            Children with a minimum age of 1 and a minimum weight of 20 lbs (or until the time they outgrow the height or weight limit of the particular seat) can be placed in the front-facing safety seats, in the back of the car. However, many experts agree that it is safest to only move children from a back-facing seat to a front-facing seat once the child turns 2.
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques12">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 12 div -->
+                                
+                                
+                                
+                            <!-- Question-Content13 div -->
+                                <div class="jump2ques13">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 13</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           It is safe for children ages 12 and under to sit in the front seat as long as they have their parents’ permission.<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  True<br/>
+                                                (B)  False<br/>
+                                             </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:380px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH13" class="AnswerH AnswerH13">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV13">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (B)  <b> False</b>
+                                            </div>
+                                            
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            Adults frequently seat their kids in the front, a dangerous practice. As per data revealed by the National Highway Traffic Safety Administration, 1% of infants and 1/3 of kids between 4 to 7 years are placed in the front seat of motor vehicles -- while all children aged 12 and below should sit in the backseat. The Insurance Institute for Highway Safety (IIHS) reports that “sitting in a rear seat instead of the front seat reduces fatal injury risk by 36 percent among children 12 and younger.”
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques13">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 13 div -->
+                                
+                                
+                            <!-- Question-Content14 div -->
+                                <div class="jump2ques14">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 14</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           Underage kids should be allowed to drive when…<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  Parents are intoxicated and unable to drive<br/>
+                                                (B)  They have adult supervision<br/>
+                                                (C)  They have to get somewhere immediately and no adults are available to drive them<br/>
+                                                (D)  Never<br/>
+                                             </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:380px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH14" class="AnswerH AnswerH14">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV14">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (D)  <b> Never</b>
+                                            </div>
+                                            
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            Demanding that children get behind the wheel or act as designated drivers when their guardians are intoxicated is one of the many disturbing cases of driving under the influence (DUI).<br/> According to the National Highway Traffic Safety Administration, yet another dangerous situation guardians put themselves and their kids in is when they ask children to blow air into the ignition interlock device in order to start a stalled vehicle.
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <button type="submit" class="nextques nextques14">Next Question ></button>
+        
+                                
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 14 div -->
+                                
+                                
+                                
+                            <!-- Question-Content15 div -->
+                                <div class="jump2ques15">
+            
+                                   <div id="question-head-container">
+                                        <div class="calendarmodule2">
+                                            <div class="calendarday"><small>Question</small> 15</div>
+                                        </div>
+                                   </div>
+                                    
+                                    <div id="question">
+                                        <div class="Q">Q</div>
+                                    
+                                        <div class="que">
+                                           You should always seat your child in front of an air bag, as that will save him/her in an event of a crash.<br/>
+                                            <div style="margin-top:4px;margin-bottom: 20px;">
+                                                (A)  True<br/>
+                                                (B)  False<br/>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div style="margin-top:280px">
+                                        <div class="A">A</div>
+                                        <div id="AnswerH15" class="AnswerH AnswerH15">
+                                            show me the correct answer
+                                        </div>
+                                        <div id="AnswerV" class="AnswerV AnswerV15">
+                                            <div class="que">
+                                            Correct answer is:
+                                            <div style="margin-top:8px;margin-bottom: 10px;">   (B)  <b> False</b>
+                                            </div>
+                                            
+                                            <div style="color: #819433;margin-bottom:   8px;">Explanation:</div>
+                                            According to the Center for Disease Control and Prevention, you should never seat your child in front of an air bag. Deployment of air bags may hurt infants and little kids. You should always seat your child in the rear seat.<br/>
+
+                                            - If for some reason you have to place your child (with the front-facing safety seats) in the front seat of the car, the seat should be moved as far back as possible from the dashboard to protect the child from getting hit by deployed air bags or the dashboard itself.<br/>
+                                            - Never put your infants with a rear facing restraint in the front seat.<br/><br/><br/>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                
+                                
+                                    <div style="margin:0px 14px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="nextques1"><a href="#">2</a></li>
+                                        <li class="nextques2"><a href="#">3</a></li>
+                                        <li class="nextques3"><a href="#">4</a></li>
+                                        <li class="nextques4"><a href="#">5</a></li>
+                                        <li class="nextques5"><a href="#">6</a></li>
+                                        <li class="nextques6"><a href="#">7</a></li>
+                                        <li class="nextques7"><a href="#">8</a></li>
+                                        <li class="nextques8"><a href="#">9</a></li>
+                                        <li class="nextques9"><a href="#">10</a></li>
+                                        <li class="nextques10"><a href="#">11</a></li>
+                                        <li class="nextques11"><a href="#">12</a></li>
+                                        <li class="nextques12"><a href="#">13</a></li>
+                                        <li class="nextques13"><a href="#">14</a></li>
+                                        <li class="nextques14"><a href="#">15</a></li>
+                                    </ul>
+                                    <br/><br/>
+                               
+                                
+                            </div>
+                            <!-- End of Question 15 div -->
+                                
+                                
+                            
+                            
+                            
+<!--
+                            <div class="div-writeup jump-top">
+                                
+                                
+                                     <center>
+                                        <div>
+                                            <a class="nav-back2top" href="#top" style="font-weight:600; color:black;">
+                                                <i class="nav-back2top-arrow">^</i>
+                                                <br/>TOP OF PAGE
+                                            </a>
+                                        </div>
+                                        <br/><br/>
+                                     </center>
+                                     
+                                     
+                                     
+                        </div>
+-->
+                                     
+                                
+                            
+                    </div>
+                            
+                            
+                    <!-- </div>-->
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbarr">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link" id="exit-quiz">EXIT QUIZ</a>
+                    <a href="#" class="link" id="logout">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+     <script type="text/javascript" src="js/style.js"></script>
+     <script type="text/javascript" src="js/func.js"></script>
+</body>
+
+</html>

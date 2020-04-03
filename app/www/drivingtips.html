@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>drivesafe</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            
+          <div class="menu-head"><h1>drive<span>safe</span></h1></div>
+            <h1 class="close-slide icon-only close-panel">x</h1>
+            <h1>MENU</h1>
+            <p class="menulist homepage">Home</p>
+            <p class="menulist menulist1">Basic Traffic Light Rules</p>
+            <p class="menulist road-rules">Basic Road Safety Rules</p>
+            <p class="menulist drivingtips">Driving Tips and Tricks</p>
+            <p class="menulist traficsigns">Traffic Signs</p>
+            <p class="menulist interactivetest">Road Safety Interactive Quiz</p>
+            
+            
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><div class="main-logo-nav1"><h1>drive<span>safe</span></h1></div></div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content home">
+                     <!--<div class="content-block">-->
+                        <div class="roadrules-content">
+                            
+                            <h1 class="roadrules1-h1">Driving Tips</h1>
+                            
+                            <div class="div-writeup">
+                                <p>For many teenagers, learning to drive is an important rite of passage. Having that licence tucked away in their wallet unlocks the gate towards earning the P-plate, and the gradual freedom and independence that comes with it.</p>
+                                <p>But the statistics are sobering: teen drivers have the highest crash risk of any age group. Drivers aged 17-25 represent only 10-15 per cent of all licensed drivers, but are involved in one out of four road deaths in Australia. For example, a 17-year-old with a P1 licence is four times more likely to be involved in a fatal crash than a 26-year-old.</p>
+                                <p>As a parent, you can play and active and crucial role in your teenager’s driving lessons. Here are nine road safety tips to share with your teen to encourage them to be better, safer drivers.</p>
+                                <h2>1. Fasten your seat belt</h2>
+
+                            </div><!-- End of div writeup-->
+                            
+                            <div class="img img16"></div>
+                            
+                            <div class="div-writeup">
+                                <p>Insist that your teen always wears a safety belt, even for short trips to the shops. According to the Centre for Accident Research and Road Safety in Queensland, you’re 10 times more likely to be killed in a road crash if you’re not wearing a seat belt.</p>
+                                <p>Seat belts work because they distribute forces from a crash across the chest and pelvis, some of the strongest parts of the body. So that belt could mean the difference between getting a few bruises versus your body flying into the windscreen.</p>
+
+                               <h2>2. Put the mobile phone away</h2>
+                                
+                            </div><!--End of div writeup -->
+                                
+                                <div class="img img17"></div>
+                            
+                            <div class="div-writeup">
+                               <p>Learner and P drivers aren’t allowed to use phones at all while driving. The physical, visual and cognitive distraction leads to unsafe driving and increases the odds of a crash. Before starting the car, have your driver-in-training switch off his phone and put it out of reach. If they need to use the phone, teach them to stop and park where using a mobile phone won’t be a danger to themselves or to other road users.</p>
+                                <p>According to researchers, each time a driver writes and sends a text, his or her eyes are off the road for an average of 4.6 seconds, enough time to drive the length of a rugby pitch. Remind your teen that it’s their job to watch the road when driving, and no one else can do it for him.</p>
+                            
+                                <h2>3. Stick to the speed limit</h2>
+                                
+                            </div><!-- End of div writeup -->
+                            
+                            <div class="img img18"></div>
+                            <p> </p>
+                                
+                            <div class="div-writeup">
+                                <p>Speeding is the biggest killer of young drivers. Remind your teen that there’s no pressure to keep up with other vehicles in traffic. Keeping to the speed limit will not only reduce the risk of an accident, but also help drivers avoid costly traffic fines that can affect car insurance premiums.</p>
+                                
+                                <h2>4. Check your blind spot every time</h2>
+                            </div><!-- End of Div writeup -->
+                            
+                            <div class="img img19"></div>
+                            
+                            <div class="div-writeup">
+                                <p>Side and rear mirrors do a good job of showing what’s happening behind the vehicle. However, they still leave areas big enough for other cars, bikes and people to hide in. That’s why drivers should check their blind spots:<br/>
+                                ● Before pulling out from the kerb<br/>
+                                ● Before parking or leaving a parked position<br/>
+                                ● Before and during a three-point turn<br/>
+                                ● Before merging with other traffic<br/>
+                                ● Before changing lanes (e.g. when passing or overtaking)<br/>
+                                ● Before turning, where you’ve seen another car</p>
+                                <p>It’s a good idea to practice checking blind spots with your teen until the head-over-the-shoulder move becomes second nature. It’s also possible to minimise the size of a blind spot by adjusting the side mirrors so that your own car is out of sight.</p>
+                                <h2>5. Don’t drive in someone else’s blind spot</h2>
+                            </div><!-- End of div writeup-->
+                            
+                            <div class="img img20"></div>
+                            <p> </p>
+                            
+                            <div class="div-writeup">
+                                <p>Teens should be aware of their own blind spots, but also those of other vehicles too. If they’re driving alongside the right of and slightly behind another car, that other car might not see them there. Your teen should pull alongside or in front of them, or drop back until he can see the face of the other car’s mirrors.</p>
+                                <h2>6. Don’t drink &amp; drive</h2>
+                            </div><!-- End of div writeup -->
+                            
+                            <div class="img img21"></div>
+                            
+                            <div class="div-writeup">
+                                <p>It’s easy to avoid the subject of alcohol and drugs, but turning a blind eye won’t make the issue go away. Australian law states that learners and probationary license-holders must have zero alcohol in their bloodstream while driving. That’s because even small amounts of alcohol in the bloodstream affects driving ability, and increases the risk of a serious or fatal accident. It’s best to set some expectations regarding drinking and driving up front. Establish a firm rule, and stick to it.</p>
+                                <h2>7. Sleep well before you drive</h2>
+                            </div><!-- End of div writeup -->
+                                
+                            <div class="img img22"></div>
+                            
+                            <div class="div-writeup">
+                                <p>Your teen may be smart enough not to drink and drive, but did you know that driving sleepy can be just as dangerous as driving drunk? Sleepiness impairs a person’s attention, working memory and coordination skills, all crucial for safe driving.</p>
+                                <p>An estimated 15 per cent of crashes are caused by fatigued driving, according to road safety researcher Chris Watling. “Young drivers don’t view the dangers of drink driving and sleepy driving equally, despite the crash risks being similar.”</p>
+                                <p>Teach your teen the warning signs of sleep driving. These include: daydreaming, difficulty focusing, frequent blinking, heavy eyelids and trouble keeping the head up. Let them know it’s OK to pull over for a 20-minute power nap, then get back on the road more rested.</p>
+                                <h2>8. Turn on your headlights</h2>
+                            </div><!-- End of div writeup -->
+                            
+                            <div class="img img23"></div>
+                            
+                            <div class="div-writeup">
+                                <p>While it’s an obvious thing to do at night, having your headlights on during the day can make it easier for other drivers to see you. This can be particularly helpful during times when the sun affects visibility (e.g. driving in the early morning or evening). Road safety campaigner Clive Matthew-Wilson points out: “You can’t control the other drivers on the road. However, by having your lights on during the day, you can make sure other drivers see you before a collision takes place.”</p>
+                                <h2>9. Take fewer passengers</h2>
+                            </div><!-- End of div writeup -->
+                            
+                            <div class="img img24"></div>
+                            
+                            <div class="div-writeup">
+                                <p>You’ve worked hard to instill good driving habits in your teen and to teach all the driving lessons necessary before they start having friends in the car. But once they start taking passengers, they may be under pressure to drive differently than normal. This often means going too fast and making risky decisions. The best policy may be to restrict the number of teen passengers.</p>
+
+                                <br/>
+                            
+                            </div>
+                            <!-- End of div writeup -->
+                            
+                         </div>
+                            
+                            
+                    <!-- </div>-->
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbarr">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link icon-only open-panel">MENU</a>
+                    <a href="#" class="link" id="logout">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+     <script type="text/javascript" src="js/style.js"></script>
+     <script type="text/javascript" src="js/func.js"></script>
+</body>
+
+</html>

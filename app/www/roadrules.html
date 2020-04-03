@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>drivesafe</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            
+          <div class="menu-head"><h1>drive<span>safe</span></h1></div>
+            <h1 class="close-slide icon-only close-panel">x</h1>
+            <h1>MENU</h1>
+            <p class="menulist homepage">Home</p>
+            <p class="menulist menulist1">Basic Traffic Light Rules</p>
+            <p class="menulist road-rules">Basic Road Safety Rules</p>
+            <p class="menulist drivingtips">Driving Tips and Tricks</p>
+            <p class="menulist traficsigns">Traffic Signs</p>
+            <p class="menulist interactivetest">Road Safety Interactive Quiz</p>
+            
+            
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><div class="main-logo-nav1"><h1>drive<span>safe</span></h1></div></div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content home">
+                     <!--<div class="content-block">-->
+                        <div class="roadrules-content">
+                            
+                            <h1 class="roadrules1-h1">Road Safety Guidlines</h1>
+                            <h1 class="roadrules2-h1">Pedestrial Safety</h1>
+                            <div class="img img10"></div>
+                            
+                            <div class="div-writeup">
+                                <p>Pedestrial fatalities can be avoided by pedestrians taking necessary precautions:</p>
+                                <ul>
+                                <li>Cross at spots where there are stop signs, traffic lights, crosswalks and where all vehicular traffic in visible.</li>
+                                <li>Stay on the sidewalk (if available) when walking. If there are no adequate sidewalks, walk on the right side against traffic so you can see motorists oncoming.</li>
+                                <li>Don't use cellphones or other distracting gadget such as MP3's when walking.</li>
+                                <li>Staying alert for vehicles turning, vehicle running the red light. Do not start to cross until all traffic has stopped.</li>
+                                <li>When crossing at locations without signals, cross the street one lane at a time. Cross into the next lane only when it is safe to do so.</li>
+                                <li>Look right, left and then right again for traffic before crossing a crosswalk. Never assume that a vehicle is going to stop for you.</li>
+                                <li>Wear light or bright coloured clothing at night, avoid dark coloured clothing, especially at dusk and at nights.</li>
+                                <li>Use pedestrian overhead bridges where provided.</li>
+                                <li>When travelling in large groups walk in a single file <strong>(one behind the other) </strong>along the roadway if no side walk in available.</li>
+                                </ul>
+
+
+                                <p>Pedestrian of different ages are at risk in different situations and for different reasons as follows:</p>
+<!--
+                                <table style="height: 152px; width: 526px; margin-left: auto; margin-right: auto;" width="526" cellpadding="2">
+                                    <tbody>
+                                    <tr>
+                                        <td><strong>Age of Pedestrian</strong></td>
+                                        <td><strong>Risk Factors</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td> 1 to 2 years</td>
+                                        <td>Reversing or backing-up</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 to 9 years</td>
+                                        <td>Dart out - don't know the rules</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 to 14 years</td>
+                                        <td>Dart out - know the rules but don't always follow them</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Adults</td>
+                                        <td>Alcohol/Drugs/Inattention/Distraction</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+-->
+                            </div><!-- End of div writeup-->
+                            
+                            
+                            <h1 class="roadrules2-h1">Child Safety</h1>
+                            <div class="img img11"></div>
+                            
+                            <div class="div-writeup">
+                                <p>Children are among the category of road users who require much attention since they are vulnerable road users. The mental perception of the average child has not reached its full capacity and therefore children tend to lack coordination and good judgement. These precious gifts should be taken care of on the roadways and should be taught how to carefully and responsibly develop into safe road users. Parents should take the time to teach children how to cross the road and when it is safe to do so. Drivers and other road users should look out for children and assist them wherever it is necessary. Parents can teach their children some of the following tips that will assist in protecting our precious gifts.</p>
+
+                                <p> </p>
+                                <h5><strong>Road Safety Tips for Children and Parents</strong></h5>
+                                <ul>
+                                <li>Look right, left, right again before crossing the road. Wait for vehicles on the both side of the road to stop before you cross.</li>
+                                <li>Cross at pedestrian crossings and traffic signals where they are available.</li>
+                                <li>Wait until the motor vehicles stops before entering the roadway.</li>
+                                <li>Do not play near or the roadway.</li>
+                                <li>Walk on the side of the road facing oncoming traffic if there is no sidewalk.</li>
+                                <li>Walk in a single file when walking with a group of friends where there is a narrow or no sidewalk.  </li>
+                                <li>Always wear a helmet, elbow and knees pads when riding a bicycle.</li>
+                                <li>If a child is a pillion passenger ensure that the child is wearing a well fitted motorcycle helmet.</li>
+                                <li>All persons including children are prohibited from riding/ hoping on the rear of large vehicles such as buses or vans.</li>
+                                </ul>
+                                <h5><strong>Motorists</strong></h5>
+                                <ul>
+                                <li>Always use a child seat and/or seatbelt</li>
+                                <li>Drive slowly and be prepared to stop near schools, parks, playgrounds and in gated communities where children play on the streets. </li>
+                                <li>Be mindful that children don’t process information at the same rate as adults. It therefore means that patience must be exercised when dealing with children in the traffic environment. </li>
+                                <li>Take the time to ensure that they have fully crossed the road before moving off. </li>
+                                <li>Always utilise a child lock whenever transporting children</li>
+                                <li>Do not leave children unattended in a motor vehicle. </li>
+                                <li>Always use a child seat and/or seatbelt.</li>
+                                </ul>
+                                <p class="text-alert">Let us protect our children as they use the roadways, by driving with them in mind.</p>
+                                <p> </p>
+                            </div><!--End of div writeup -->
+                            
+                            <h1 class="roadrules2-h1">Pedalcyclist Safety</h1>
+                            
+                            <div class="div-writeup">
+                                <p>Pedalcyclist can be viewed as one of the most very vulnerable road users on Jamaica's Roads. These tips provided for one's safety while riding and should take into practice. Some bike crashes can cause serious injuries and most are related to the behaviour of you pedalcyclist or the motorist and other road users. There are a number of things you can do to prevent a pedalcycle crash, and protect your brain if a crash occurs. </p>
+                            </div><!-- End of div writeup -->
+                            
+                                <div class="img img12"></div>
+                                <p> </p>
+                                
+                            <div class="div-writeup">
+                                <h3><strong>Pedal Cyclist Safety Tips</strong></h3>
+                                <h5><strong>WEAR A HELMET AT ALL TIMES</strong></h5>
+                                <p>Protect your head. This is the first and last rule of bicycle safety. A good helmet may save your life and may be your only defence against variables you cannot control. Be sure you wear a helmet that is carefully fitted to your head and fasten the strap.</p>
+                                <h5><strong>ADHERE TO THE RULES OF THE ROAD</strong></h5>
+                                <p>Just as automobiles and other vehicles on the road must follow standard operating procedures designed to ensure safety, facilitate the flow of traffic and maintain order on our roads, pedal cyclists, if they are to share the road with motorized vehicles, must cooperate accordingly.</p>
+                                <ul>
+                                <li>Ride with the traffic.</li>
+                                <li>Plan and signal well ahead.</li>
+                                <li>Make no sudden moves - except in self defence or in an emergency.</li>
+                                <li>Stop and wait at stop signs and red lights when in traffic or on busy streets. Maintain your place in the right lane and let everyone around you know what you plan to do.</li>
+                                <li>Give others on the road plenty of time to adjust their speed and position to accommodate you.</li>
+                                <li>Avoid surprising others on the road e.g. ring a bell when coming out of narrow or obscure pathways, signals the direction you intend to turn.</li>
+                                </ul>
+                                <p><strong>ALWAYS HAVE AN ESCAPE </strong></p>
+                                <p>Expect the unexpected.</p>
+                                <h5><b>MAINTAIN YOUR BICYCLE IN EXCELLENT CONDITION</b></h5>
+                                <p>Your ride will be safer, more fun if your bike is in excellent operating condition. Have a bicycle technician check your bicycle to make sure it is the right size for you.</p>
+                                <ul>
+                                <li>Adjust the seat and handlebars to the proper height and position.</li>
+                                <li>Tires should be in good condition and properly inflated. Carry a spare inner-tube and a pump - learn how to change a tire.</li>
+                                <li>Your brakes should be properly adjusted with plenty of pad.</li>
+                                <li>Check all cables every time you ride. Replace frayed cables immediately.</li>
+                                <li>Your chain and gears should be free of dirt and grease. Most people put too much lubricant on their chain.</li>
+                                <li>Tighten all loose screws and nuts. If you can hear a rattle or rub while you are riding you need to stop, isolate and correct the problem.</li>
+                                <li>In low lights conditions you should have reflectors - on your bicycle and on your clothing, helmet. At night you should have lights - in front and behind.</li>
+                                </ul>
+                                <h5><strong>KNOW YOUR LIMITATIONS AND PLANS YOUR RIDES</strong></h5>
+                                <p>Are you physically prepared for the ride ahead? Do you know where and how far you are going? Are you dressed properly? Are you prepared for changes in weather? Have you had enough to eat? Do you have enough water with you?</p>
+                                <ul>
+                                <li>Do not ride if you feel dizzy or out of breath.</li>
+                                <li>Keep hydrated at all times.</li>
+                                <li>Avoid riding in the sun all day or extremely bad weather such as rain storms.</li>
+                                </ul>
+                                <h5><strong>Main Pedalcyclist Safety Issues</strong></h5>
+                                <ul>
+                                <li>Riding at night without headlight or reflectors.</li>
+                                <li>Riding while intoxicating with alcohol or other narcotics.</li>
+                                <li>Transporting more than one pillion passenger.</li>
+                                <li>Poor maintenance of bicycle</li>
+                                <li>Speeding down location with steep gradient e.g. Hills/Mountains.</li>
+                                <li>Violation of traffic and stop signals.</li>
+                                <li>Wind drifting by riding close to large vehicle to gain speed through the speed of the powerful motorized vehicle.</li>
+                                </ul>
+                                <p> </p>
+                            </div><!-- End of Div writeup -->
+                            
+                            
+                            <h1 class="roadrules2-h1"><strong>Motorists Safety</strong></h1>
+                            
+                            <div class="div-writeup">
+                                <p>Traffic collisions are one of the major causes of fatalities in Jamaica. In 2009 a total of 347 road users died with 317 following in 2010. Even though the numbers have decreased road users are not taking proper care on the roads.</p>
+                            </div><!-- End of div writeup-->
+                            
+                            <div class="img img13"></div>
+                            <p> </p>
+                            
+                            <div class="div-writeup">
+                                <h5><strong>Main Safety issues for motorists</strong></h5>
+                                <ul>
+                                <li>Drivers failing to cope with physical conditions of the road way.</li>
+                                <li>Drink and drug driving.</li>
+                                <li>Driving while fatigued.</li>
+                                <li>Driving while using a Mobile phone or other handheld devices.</li>
+                                <li>Disobeying traffic laws, particularly not using seatbelts.</li>
+                                <li>Drivers are responsible for the safety of their passengers.</li>
+                                <li>Inappropriate speeding.</li>
+                                </ul>
+                                <h5><strong>Tips for Motorists to Stay Safe</strong></h5>
+                                <ul>
+                                <li>Do not exceed the prescribe speed limit.</li>
+                                <li>Do not drive after drinking or using mind altering substances such as drugs or alcohol.</li>
+                                <li>Commercial entities can install alcolocks in motor vehicles to ensure the safety of their driver and mechandise</li>
+                                <li>Wear seatbelts, front seat and back seat passengers should practice this behaviour.</li>
+                                <li>Adhere to seatbelt warning signals.</li>
+                                <li>Try to minimize distractions. Avoid using DVD players and cell phones while driving.</li>
+                                <li>Do not drive if feeling tired or haven't slept in the last 18 hours.</li>
+                                <li>Pedestrians are unable to judge speed and distance. Motorists should ensure they lookout for them especially the children.</li>
+                                </ul>
+                            </div><!-- End of div writeup -->
+                            
+                            
+                            <h1 class="roadrules2-h1"><strong>Motocyclists Safety</strong></h1>
+                            <div class="div-writeup">
+                                <p>Many countries are faced with the problem of a rapid rising number of people injured or killed while riding motorcycles. These injuries or fatalitites are most times due to trauma to the head or neck. Cyclists need to increase their safety and maintain their motorcycles properly. This mode of transportation is under the same right and responsibility as car drivers.</p>
+                            </div><!-- End of div writeup -->
+                                
+                            <div class="img img14"></div>
+                            
+                            <div class="div-writeup">
+                                <p style="text-align: center;"><strong>Picture source: Jamaica Observer</strong></p>
+                                <h5><strong>Main Safety Issues for Motorcyclists are:</strong></h5>
+                                <ul>
+                                <li>The non-use of protective gear; such as helmet.</li>
+                                <li>Riding at nights without headlamps, reflectors or rear lights on.</li>
+                                <li>Slow down and take care when responding to tricky road surface and potholes.</li>
+                                <li>Creating new lane on the outside or inside legal traffic.</li>
+                                <li>Interweaving through traffic and riding in between moving and stationery vehicles.</li>
+                                <li>Performing stunts on the public roadway.</li>
+                                <li>Riding motorcycles with prohibited CC ratings of 1000 or over.</li>
+                                <li>Practicing stunt tricks on public throughfares.</li>
+                                <li>Transporting more than one pillion passenger.</li>
+                                </ul>
+                                <h5><strong>Tips for Motorcyclists to Stay Safe</strong></h5>
+                                <ul>
+                                <li>Rider as well as the pillion passenger must always wear a correctly fitted helmet.</li>
+                                <li>Wear bright coloured clothing, especially at nights to make yourself more visible.</li>
+                                <li>Obey all traffic control signals e.g red lights, one way and stop signs.</li>
+                                <li>Ensure headlamp and all other lights on motorcycles are working.</li>
+                                <li>Look out for other road users particularly when they are approaching you from behind or pulling out in front of you.</li>
+                                <li>Keep traffic lane and desist from weaving in and out of traffic.</li>
+                                <li>Do not use cell phones while riding.</li>
+                                <li>Motorcycles used fro commercial delivery should not be overloaded.</li>
+                                </ul>
+                            </div><!-- End of div writeup -->
+                            
+                            
+                            <h1 class="roadrules2-h1">Pillion Safety</h1>
+                            <div class="div-writeup">
+                                <p>Pillion passengers are a safety issue on motorcycles. As occasional passengers, it is perhaps not surprising that pillions are often less likely to have adequate protective clothing, but it is a serious safety problem.</p>
+                                <p>Riders need to be aware of their responsibility in relation to their pillion passengers.</p>
+                            </div><!-- End of div writeup -->
+                            
+                            <div class="img img15"></div>
+                            
+                            <div class="div-writeup">
+                                <h5><strong>Main Safety Issues for Pillion Passengers are:</strong></h5>
+                                <ul>
+                                <li>Inadequate protective clothing on pillion passenger changed motorcycles handling characteristics.</li>
+                                <li>Suspension and tyre pressures need adjustment to compensate for the additional weight and to return the ride height.</li>
+                                <li>Pillions who are not experienced may cause problems for the rider shifting their weight unexpectedly.</li>
+                                <li>A pillion may crowd the rider on a motorcycle, this may affect heavy braking and in slow speed manoeuvring situation.</li>
+                                <li>On a short wheelbase motorcycle the weight shift to the rear can result in some steering instability under certain circumstances.</li>
+                                <li>Having more than one pillion rider on a motorcycle.</li>
+                                </ul>
+                                <h5><strong>Tips for pillions</strong></h5>
+                                <ul>
+                                <li>Align your body with that of the rider especially when motorcycle is leaning around curves.</li>
+                                <li>Grip the grab rail, or hold the rider at the waist and grip with your knees under braking.</li>
+                                <li>Pick a shoulder to look over and don't change shoulder or wiggle about when cornering or braking.</li>
+                                <li>Stay still as the motorcycle is coming to a stop, to aid the rider's ability to feel the balance of the machine.</li>
+                                <li>Keep your feet on the foot pegs at all times.</li>
+                                <li>The pillion rider should have appropriate protective gear since they are taking exact same risks as the rider.</li>
+                                <li>The driver and passenger need to agree on a method of communication.</li>
+                                <li>The pillion needs to be shown how to get on and off the bike.</li>
+                                <li>The passenger should also use feet on the pegs and grip with legs to ensure a tight connection with the bike.</li>
+                                <li>The passenger needs to know about hot parts of the motorcycle, including pipes and brake discs, and any other potential hazards or fragile equipment.</li>
+                                </ul>
+
+                                <br/>
+                            
+                            </div>
+                            <!-- End of div writeup -->
+                            
+                         </div>
+                            
+                            
+                    <!-- </div>-->
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbarr">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link icon-only open-panel">MENU</a>
+                    <a href="#" class="link" id="logout">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+     <script type="text/javascript" src="js/style.js"></script>
+     <script type="text/javascript" src="js/func.js"></script>
+</body>
+
+</html>

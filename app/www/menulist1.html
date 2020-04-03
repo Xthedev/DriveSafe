@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>drivesafe</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            
+          <div class="menu-head"><h1>drive<span>safe</span></h1></div>
+            <h1 class="close-slide icon-only close-panel">x</h1>
+            <h1>MENU</h1>
+            <p class="menulist homepage">Home</p>
+            <p class="menulist menulist1">Basic Traffic Light Rules</p>
+            <p class="menulist road-rules">Basic Road Safety Rules</p>
+            <p class="menulist drivingtips">Driving Tips and Tricks</p>
+            <p class="menulist traficsigns">Traffic Signs</p>
+            <p class="menulist interactivetest">Road Safety Interactive Quiz</p>
+            
+            
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><div class="main-logo-nav1"><h1>drive<span>safe</span></h1></div></div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content home">
+                     <!--<div class="content-block">-->
+                        <div class="menulist1-content">
+                            <h1>Traffic Light Rules</h1>
+                            <div class="img img1"></div>
+                            
+                            <p>Traffic control signals are devices placed along, beside, or above a roadway to guide, warn, and regulate the flow of traffic, which includes motor vehicles, motorcycles, bicycles, pedestrians, and other road users.</p>
+                            <ul style="color:#b33a46;"><li>RED</li></ul>
+
+                            <div class="img img2"></div>
+                            <p><b>RED:</b> A red signal light means STOP.</p>
+
+                            <p>A right turn can be made against a red light ONLY after you stop and yield to pedestrians and vehicles in your path. DO NOT turn if there is a sign posted for NO TURN ON RED.</p>
+                            
+                            <div class="img img3"></div>
+                            <p>RED ARROW-A red arrow means STOP until the green signal or green arrow appears. A turn may not be made against a red arrow.</p>
+                            
+
+                            <div class="img img4"></div>
+                            <p>FLASHING RED—A flashing red signal light means exactly the same as a stop sign: STOP! After stopping, proceed when safe and observe the right-of-way rules.</p>
+                            
+                            <ul style="color:#97670f;"><li>YELLOW</li></ul>
+                            <div class="img img5"></div>
+                            <p><b>YELLOW:</b> A yellow signal light warns you that the red signal is about to appear. When you see the yellow light, you should stop, if you can do so safely. If you can't stop, look out for vehicles that may enter the intersection when the light changes.</p>
+                                       
+            
+                            <p>FLASHING YELLOW—A flashing yellow signal light warns you to be careful. Slow down and be especially alert.</p>
+
+
+                            <p>YELLOW ARROW—A lighted red arrow is about to appear. Stop if you are not already in the intersection.</p>
+                            <div class="img img6"></div>
+                            
+                            <ul style="color:#068777;"><li>GREEN</li></ul>
+                            <p><b>GREEN:</b> A green light means GO, but you must first let any vehicles, bicycles, or pedestrians remaining in the intersection get through before you move ahead.</p>
+                            <div class="img img7"></div>
+                            
+                            <p>You can turn left ONLY if you have enough space to complete the turn before any oncoming vehicle, bicycle, or pedestrian becomes a hazard. Vehicles turning left must always yield to those going straight from the opposite direction.</p>
+                            
+                            <p>Do not enter an intersection, even when the light is green, unless there is enough space to cross completely before the light turns red. If heavy traffic causes you to block traffic, you can be cited.</p>
+                            <div class="img img8"></div>
+                            
+                            <p>GREEN ARROW—A green arrow means GO, but first you must yield to any vehicle, bicycle, or pedestrian still in the intersection. The green arrow pointing right or left allows you to make a protected turn; oncoming vehicles, bicycles, and pedestrians are stopped by a red light as long as the green arrow is lit.</p>
+                            
+                            <ul><li>TRAFFIC SIGNAL BLACKOUT</li></ul>
+                            <div class="img img9"></div>
+                            <p><b>TRAFFIC SIGNAL BLACKOUT:</b>
+                                If all traffic signal lights are not working because of an electrical power failure, you must stop at the intersection and then proceed when you know other turning and approaching vehicles, bicycles, or pedestrians have stopped. A blacked-out traffic signal works the same as a four-way stop intersection.</p>
+                                <br/><br/>
+                            
+                         </div>
+                            
+                            
+                    <!-- </div>-->
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbarr">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link icon-only open-panel">MENU</a>
+                    <a href="#" class="link" id="logout">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+     <script type="text/javascript" src="js/style.js"></script>
+     <script type="text/javascript" src="js/func.js"></script>
+</body>
+
+</html>

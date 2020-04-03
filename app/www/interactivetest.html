@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>drivesafe</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            
+          <div class="menu-head"><h1>drive<span>safe</span></h1></div>
+            <h1 class="close-slide icon-only close-panel">x</h1>
+            <h1>MENU</h1>
+            <p class="menulist homepage">Home</p>
+            <p class="menulist menulist1">Basic Traffic Light Rules</p>
+            <p class="menulist road-rules">Basic Road Safety Rules</p>
+            <p class="menulist drivingtips">Driving Tips and Tricks</p>
+            <p class="menulist traficsigns">Traffic Signs</p>
+            <p class="menulist interactivetest">Road Safety Interactive Quiz</p>
+            
+            
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><div class="main-logo-nav1"><h1>drive<span>safe</span></h1></div></div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content home">
+                     <!--<div class="content-block">-->
+                        <div class="roadrules-content">
+                            
+                            <div id="interactivetest">
+                                <!------------>
+                            <div class="div-writeup">
+                                <h2 class="interactive-head">Interactive Road Safety Quiz</h2>
+                            </div>
+                            
+                            <hr size="1" color="#EADCC4" style="margin-top:20px;"/>
+                            
+                            <div class="div-writeup">
+                                <p>Here is the learning tool to help make you a genius on  vehicle safety. After taking this free 15-question quiz you will know what children need for vehicle safety and what safety precautions must be taken before entering a vehicle.
+                                </p>
+                                
+                                <p>We offer multiple choice and true/false questions with hints to help out and explanations to answers filled with facts, legal information, and advice. And the best part: the quizzes are free! We understand the importance of continuous learning, particularly when it comes to being safe. By offering this quiz, we hope that people will enter a car with more knowledge than they previously had of it, and in turn prevent injuries and save lives.
+                                </p>
+                                
+                            <!--
+                                <p style="margin: 0px 0 24px;">
+                                    <a class="hover-button" href="#" style="height:55px;width: 350px; background:#fbe996; color:#990000; padding:7px 10px; box-shadow:5px 3px 5px #f9c347; border-radius:15px;">
+                                        <span><b>Start Your Quiz</b></span>
+                                    </a>
+                                </p>
+                            -->
+                                
+                                <p style="color:#960;font-family:serif;font-size: 20px;">Think you're already a child safety expert?
+                                </p>
+                                <p>These questions below are just a preview of what you'll be tested on in our quiz. Do YOU already know the answers?
+                                </p>
+                                
+                                <div>
+                                    <p style="font-size:17px; line-height:1.375em; padding-left:40px; padding-right:40px;">• How old do children need to be for a front facing seatbelt?
+                                    </p>
+                                    <p style="font-size:17px; line-height:20px; padding-left:40px; padding-right:40px;">• Are airbags safe for children eleven years old?
+                                    </p>
+                                    <p style="font-size:17px; line-height:20px; padding-left:40px; padding-right:40px;">• What danger do power windows pose to children?
+                                    </p>
+                                    <p style="font-size:17px; line-height:20px; padding-left:40px; padding-right:40px;">• What is the most common cause of unintentional death related to non-moving vehicles?
+                                    </p>
+                                    <p style="font-size:17px; line-height:20px; padding-left:40px; padding-right:40px;">• What are back over accidents and how are they best prevented?
+                                    </p>
+                                </div>
+                                
+                                 <div>
+                                     
+                                    <div style="margin:10px 0px" class="body10">
+                                        Jump to Question#:
+                                    </div>
+                                     
+                                     <ul class="pagination" style="margin-top:10px;    margin-left: -30px;line-height: 39px;">
+                                        <li class="jump1"><a href="#">1</a></li>
+                                        <li class="jump1"><a href="#">>></a></li>
+                                    </ul>
+                                     <br/><br/>
+<!--
+                                     <center>
+                                        <div>
+                                            <a class="nav-back2top" href="#top" style="font-weight:600; color:black;">
+                                                <i class="nav-back2top-arrow">^</i>
+                                                <br/>TOP OF PAGE
+                                            </a>
+                                        </div>
+                                        <br/><br/>
+                                     </center>
+-->
+                                     
+                                     
+                                     
+                                </div>
+                                
+                                
+
+                                
+                                
+                            
+                         </div>
+                            
+                            
+                    <!-- </div>-->
+                            
+                            <!-------------->
+                        </div> <!-- added div from top -->
+                    
+                    </div>
+                            
+                    
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbarr">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link icon-only open-panel">MENU</a>
+                    <a href="#" class="link" id="logout">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+     <script type="text/javascript" src="js/style.js"></script>
+     <script type="text/javascript" src="js/func.js"></script>
+</body>
+
+</html>
